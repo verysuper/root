@@ -1,0 +1,10 @@
+#show {
+	width: 500px;
+	height: auto;
+	position: relative;
+}
+#show img {
+	width: 100%;
+	height: auto;
+	border-radius: 14px;
+}

@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, user-scalable=no">
+  <link href="http://jqmdesigner.appspot.com/gk/lib/jquery.mobile/1.4.5/jquery.mobile-1.4.5.min.css" rel="stylesheet" type="text/css" />
+	<link rel="stylesheet" href="css/123123123123.css">
+	<link rel="stylesheet" href="css/123123123123.min.css">
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>
+    $(document).on("mobileinit", function () {
+      $.mobile.autoInitializePage = false;
+      $.mobile.hashListeningEnabled = false;
+    });
+
+    function mobileInitPage() {
+      $.mobile.hashListeningEnabled = true;
+      $.mobile.initializePage();
+    };
+  </script>
+  <script src="//code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+  <!-- Uncomment the following to include cordova in your android project -->
+  <!--<script src="http://jqmdesigner.appspot.com/platforms/android/cordova.js"></script>-->
+  <!-- GK Loader use RequireJS to load module -->
+  <script src="http://requirejs.org/docs/release/2.1.11/minified/require.js"></script>
+  <!--Plug in GK-->
+  <script src="http://jqmdesigner.appspot.com/components/jquery.gk/jquery.gk.min.js"></script>
+  <!-- Load GK components -->
+  <script components="http://jqmdesigner.appspot.com/components/gk-ext/bxslider.html,http://jqmdesigner.appspot.com/components/gk-ext/gk-text.html,http://jqmdesigner.appspot.com/components/gk-ext/image.html" callback="mobileInitPage" src="http://jqmdesigner.appspot.com/components/gk-loader/gk-loader.js"></script>
+  <!-- Export JS  -->
+  <script>
+    $(document).on("gkComponentsReady", function (w) {
+      var $ele = $("#gk-6199vCZ");
+      if ($ele.length > 0) {
+        var img = [{
+          "data-src": "http://www.dropmysite.com/images/social/icon-google.png?1386321977"
+        }, {
+          "data-src": "http://www.dropmysite.com/images/social/icon-facebook.png?1386321977"
+        }, {
+          "data-src": "http://www.dropmyemail.com/assets/icon-twitter-963acb3e091cfea4ef6394d6c3b9e388.png"
+        }];
+        $ele.gk("model", img);
+        $ele.gk("onclick", function (e) {
+          alert(e.target);
+        });
+      }
+    });
+  </script>
+  <title>EZo App</title>
+</head>
+
+<body gk-app>
+  <!-- Page: home  -->
+  <div id="home" data-role="page" text="Button">
+    <div data-role="header" data-position="fixed">
+      <h3>Header</h3>
+      <a class="ui-btn ui-btn-left">Button</a>
+    </div>
+    <div role="main" class="ui-content">
+      <ul is="bxslider" style="height:100px;width:100%" captions="true">
+        <li>
+          <img style="width:100%;height:60px" src="http://i.imgur.com/b9h4ILl.png" title="Funky roots">
+        </li>
+        <li>
+          <img style="width:100%;height:60px" src="http://i.imgur.com/vnxjGeS.jpg">
+        </li>
+        <li>
+          <img style="width:100%;height:60px" src="http://i.imgur.com/9md2qds.jpg">
+        </li>
+        <li>
+          <img style="width:100%;height:60px" src="http://i.imgur.com/b9h4ILl.png" title="Funky roots">
+        </li>
+        <li>
+          <img style="width:100%;height:60px" src="http://i.imgur.com/vnxjGeS.jpg">
+        </li>
+        <li>
+          <img style="width:100%;height:60px" src="http://i.imgur.com/9md2qds.jpg">
+        </li>
+      </ul>
+      <h1 is="gk-text">Text</h1>
+      <ul data-role="listview" data-inset="true">
+        <li data-role="list-divider">Divider</li>
+        <li>
+          <a href="#page1">
+            <img src="http://jqmdesigner.appspot.com/images/image.png" class="ui-li-icon">Item</a>
+        </li>
+        <li>
+          <a href="#page2">
+            <img src="http://jqmdesigner.appspot.com/images/image.png" class="ui-li-icon">Item</a>
+        </li>
+        <li>
+          <a href="#page1">
+            <img src="http://jqmdesigner.appspot.com/images/image.png" class="ui-li-icon">Item</a>
+        </li>
+        <li>
+          <a href="#page2">
+            <img src="http://jqmdesigner.appspot.com/images/image.png" class="ui-li-icon">Item</a>
+        </li>
+      </ul>
+    </div>
+    <div data-position="fixed" data-role="footer">
+      <div data-role="navbar">
+        <ul>
+          <li>
+            <a data-icon="home" href="#page">BtnA</a>
+          </li>
+          <li>
+            <a data-icon="star" href="#page">BtnB</a>
+          </li>
+          <li>
+            <a data-icon="star" href="#page">BtnB</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <!-- Page: page1  -->
+  <div id="page1" data-role="page" text="Button">
+    <div data-role="header" data-position="fixed">
+      <h3>Header</h3>
+      <a class="ui-btn ui-btn-left ui-icon-home ui-btn-icon-left" href="#home">Button</a>
+    </div>
+    <div role="main" class="ui-content">
+      <img style="width:100%;" src="https://s3-us-west-1.amazonaws.com/niusnews-imgs/294266_1.jpg" is="image">
+      <div class="ui-grid-b" style="height:95px">
+        <div class="ui-block-a" style="height:100%">
+          <img style="height:100%;width:100%;" src="http://img.netbian.com/file/20101206/8823310f1763ab17256b0c62d2c67952.jpg" is="image">
+        </div>
+        <div class="ui-block-b" style="height:100%">
+          <img src="http://jqmdesigner.appspot.com/images/image.png" is="image" style="width:100%;">
+        </div>
+        <div class="ui-block-c" style="height:100%">
+          <img style="width:100%;" src="http://jqmdesigner.appspot.com/images/image.png" is="image">
+        </div>
+      </div>
+      <h1 is="gk-text">page1</h1>
+      <p>1231231231</p>
+      <p>1231231231</p>
+      <p>1231231231</p>
+      <p>1231231231</p>
+      <a class="ui-btn ui-btn-icon-right ui-icon-shop" href="#home">Button</a>
+    </div>
+    <div data-position="fixed" data-role="footer">
+      <div data-role="navbar">
+        <ul>
+          <li>
+            <a data-icon="home" href="#page" class>BtnA</a>
+          </li>
+          <li>
+            <a data-icon="star" href="#page">BtnB</a>
+          </li>
+          <li>
+            <a data-icon="star" href="#page">BtnB</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <!-- Page: page2  -->
+  <div id="page2" data-role="page" text="Button">
+    <div data-role="header" data-position="fixed">
+      <h3>Header</h3>
+      <a class="ui-btn ui-btn-left ui-icon-home ui-btn-icon-left" href="#home">Button</a>
+    </div>
+    <div role="main" class="ui-content">
+      <img style="width:100%;" src="https://s3-us-west-1.amazonaws.com/niusnews-imgs/294266_1.jpg" is="image">
+      <div class="ui-grid-b" style="height:95px">
+        <div class="ui-block-a" style="height:100%">
+          <img style="height:100%;width:100%;" src="http://img.netbian.com/file/20101206/8823310f1763ab17256b0c62d2c67952.jpg" is="image">
+        </div>
+        <div class="ui-block-b" style="height:100%">
+          <img src="http://jqmdesigner.appspot.com/images/image.png" is="image" style="width:100%;">
+        </div>
+        <div class="ui-block-c" style="height:100%">
+          <img style="width:100%;" src="http://jqmdesigner.appspot.com/images/image.png" is="image">
+        </div>
+      </div>
+      <h1 is="gk-text">page2</h1>
+      <p>1231231231</p>
+      <p>1231231231</p>
+      <p>1231231231</p>
+      <p>1231231231</p>
+      <a class="ui-btn ui-btn-icon-right ui-icon-shop" href="#home">Button</a>
+    </div>
+    <div data-position="fixed" data-role="footer">
+      <div data-role="navbar">
+        <ul>
+          <li>
+            <a data-icon="home" href="#page" class>BtnA</a>
+          </li>
+          <li>
+            <a data-icon="star" href="#page">BtnB</a>
+          </li>
+          <li>
+            <a data-icon="star" href="#page">BtnB</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

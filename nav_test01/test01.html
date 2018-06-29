@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0;
+            background: url(131434743512951181.jpg) no-repeat center center fixed;
+            background-size: cover;
+        }
+        nav{
+            width: 100%; height: 44px;
+            background:rgba(0, 0, 0,0.5);
+            position: fixed; top: 0; right: 0; /*bottom: 0;*/ left: 0; margin: auto;
+            /* display: flex;justify-content: center;align-items: center; */
+        }
+        .menu1 ul{
+            margin:0 auto;
+            padding: 0;
+            list-style: none;
+            display: flex;
+            justify-content: center;align-items: center;
+        }
+        .menu1 ul li {
+            display:inline-block;            
+        }
+        .menu1 ul li a{
+            display:block;
+            min-width:80px;
+            text-align: center;
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            color: #fff;
+            text-transform:uppercase;  
+            text-decoration: none;
+            margin-left:-5px;
+            padding: 10px 0;
+            transition: all 0.4s ease 0s;
+        }
+        .menu1 ul li:hover a {
+            color: #000;
+            background-color:#fff;
+        }
+        .menu2{
+                display: none;
+        }
+        @media screen and (max-width : 800px){
+            .menu1{
+                display: none;
+            }
+            /********* 暫 *********/
+            .menu2{
+                display:block;
+            }
+            .menu2 ul{
+            margin:0 auto;
+            padding: 0;
+            list-style: none;            
+            }
+            .menu2 ul li {
+                display:inline-block;
+            }
+            .menu2 ul li a{
+                display:block;
+                min-width:80px;
+                text-align: center;
+                font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+                color: #fff;
+                text-transform:uppercase;  
+                text-decoration: none;
+                margin-left:-5px;
+                padding: 10px 0;
+                transition: all 0.4s ease 0s;
+            }
+            /* .menu2 ul li:hover a {
+                color: #000;
+                background-color:#fff;
+            } */
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="menu1">
+            <ul>
+                <li><a href="#">apple</a></li>
+                <li><a href="#">mac</a></li>
+                <li><a href="#">ipad</a></li>
+                <li><a href="#">iphone</a></li>
+                <li><a href="#">watch</a></li>
+                <li><a href="#">tv</a></li>
+                <li><a href="#">music</a></li>
+                <li><a href="#">support</a></li>
+                <li><a href="#">search</a></li>
+                <li><a href="#">bag</a></li>
+            </ul>
+        </div>
+        <div class="menu2">
+                <ul>
+                    <li><a href="#">menu</a></li>
+                    <li><a href="#">apple</a></li>
+                    <li><a href="#">bag</a></li>
+                </ul>
+        </div>
+    </nav>
+</body>
+</html>
